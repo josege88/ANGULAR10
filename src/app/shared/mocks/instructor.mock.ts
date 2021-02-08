@@ -1,6 +1,6 @@
 import { IInstructor } from '../interfaces/instructor';
 
-export const courseMock: IInstructor[] = [
+export const instructorMock: IInstructor[] = [
 {
     "id": 1,
     "name": "Jose Carlos",

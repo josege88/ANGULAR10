@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ICourse } from 'src/app/shared/interfaces/course';
+import { CourseService } from 'src/app/shared/services/course/course.service';
 
 @Component({
   selector: 'app-course-detail',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseDetailComponent implements OnInit {
 
-  constructor() { }
+  @Input() courseId;
+  course: ICourse;
+  constructor(
+private courseService : CourseService
+
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  fetchCourse() {
+    this.courseService.getCourse(this.courseId).subscribe(
+      course => this.course = course
+    )
   }
 
 }

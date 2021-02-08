@@ -1,1 +1,21 @@
-<p>course-short works!</p>
+<img [src]="course.image" width="100%" height="auto">
+  <p >
+    {{ course.instructor }}
+  </p>
+  <p >
+    {{ course.price }}
+  </p>
+  <p >
+    {{ course.category }}
+  </p>
+<p class="course-title">
+ <a [routerLink]="['/courses', course.id]">
+   {{ course.name }}
+  </a>
+</p>
+<p >
+    {{ course.students }}
+  </p>
+<p >
+  {{ course.duration }}
+</p>
