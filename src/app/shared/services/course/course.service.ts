@@ -7,17 +7,16 @@ import { ICourseService } from '../../interfaces/course-service';
     providedIn: 'root'
   })
   export class CourseService implements ICourseService {
-  
     constructor() { }
-  
+
     getCourses(): Observable<ICourse[]> {
       return;
     }
-  
+
     getFeaturedCourses(): Observable<ICourse[]> {
       return;
     }
-    
+
     getCourse(id: number): Observable<ICourse> {
       return;
     }

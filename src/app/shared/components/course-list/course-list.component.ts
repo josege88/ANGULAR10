@@ -8,13 +8,13 @@ import { CourseService } from '../../services/course/course.service';
 })
 export class CourseListComponent implements OnInit {
 
-  @Input() isFeatured: boolean = false;
-  @Input() showCourses: number = 4;
+  @Input() isFeatured = false;
+  @Input() showCourses = 4;
   courses: ICourse[];
   classShowCourse: number;
   constructor(
     private courseService: CourseService
-  ) {     
+  ) {
   }
 
   ngOnInit(): void {
@@ -28,11 +28,11 @@ export class CourseListComponent implements OnInit {
     if (this.isFeatured) {
       this.courseService.getFeaturedCourses().subscribe(
         courses => this.courses = courses
-      )
+      );
     }else {
       this.courseService.getCourses().subscribe(
         courses => this.courses = courses
-      )
+      );
     }
   }
 

@@ -12,17 +12,16 @@ export class CourseDetailComponent implements OnInit {
   @Input() courseId;
   course: ICourse;
   constructor(
-private courseService : CourseService
-
+private courseService: CourseService
   ) { }
 
   ngOnInit(): void {
   }
 
-  fetchCourse() {
+  fetchCourse(): void  {
     this.courseService.getCourse(this.courseId).subscribe(
       course => this.course = course
-    )
+    );
   }
 
 }

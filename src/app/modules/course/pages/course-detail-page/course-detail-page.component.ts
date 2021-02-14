@@ -18,7 +18,7 @@ export class CourseDetailPageComponent implements OnInit {
       (params: Params) => {
         this.courseId = this.getCourseId(params);
       }
-    )
+    );
   }
 
   getCourseId(params: Params): number {

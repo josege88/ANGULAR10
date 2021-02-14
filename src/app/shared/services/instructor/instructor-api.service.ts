@@ -1,7 +1,6 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ICourse } from '../../interfaces/course';
+import { HttpClient, HttpBackend  } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { InstructorService } from './instructor.service';
 import { IInstructor } from '../../interfaces/instructor';
@@ -12,10 +11,12 @@ import { IInstructor } from '../../interfaces/instructor';
 export class InstructorApiService extends InstructorService {
 
   apiUrl: string = environment.apiUrl;
+  private http: HttpClient;
   constructor(
-    private http: HttpClient
-  ) { 
+    handler: HttpBackend
+  ) {
     super();
+    this.http = new HttpClient(handler);
   }
 
   getInstructors(): Observable<IInstructor[]> {

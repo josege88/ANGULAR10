@@ -1,1 +1,6 @@
-<p>suscribe-form works!</p>
+<form [formGroup]="suscribeForm" (ngSubmit)="toSuscribe(suscribeForm)">
+    <input type="email" placeholder="ingrese email" formControlName="email">
+    <button>suscribirse</button><br />
+    <app-form-message-error></app-form-message-error>
+  </form>
+  

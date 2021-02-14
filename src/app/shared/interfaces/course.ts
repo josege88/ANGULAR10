@@ -3,7 +3,7 @@ import { languageCode } from '../types';
 export interface ICourse {
   id: number;
   name: string;
-  featured: boolean;  
+  featured: boolean;
   image: string;
   language: languageCode;
   price: number;
@@ -11,7 +11,7 @@ export interface ICourse {
   lessons: number;
   deadline: string | Date;
   students: number;
-  summary: string;  
+  summary: string;
   instructor: number;
-  category:number
+  category: number;
 }

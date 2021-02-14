@@ -7,17 +7,17 @@ import { IInstructorService } from '../../interfaces/instructor-service';
     providedIn: 'root'
   })
   export class InstructorService implements IInstructorService {
-  
+
     constructor() { }
-  
+
     getInstructors(): Observable<IInstructor[]> {
       return;
     }
-  
+
     // getFeaturedCourses(): Observable<IInstructor[]> {
     //   return;
     // }
-    
+
     getInstructor(id: number): Observable<IInstructor> {
       return;
     }

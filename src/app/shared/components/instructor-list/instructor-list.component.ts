@@ -9,20 +9,19 @@ import { InstructorService } from '../../services/instructor/instructor.service'
 })
 export class InstructorListComponent implements OnInit {
 
-  instructors: IInstructor[]
+  instructors: IInstructor[];
   constructor(
     private instructorServie: InstructorService
   ) { }
 
   ngOnInit(): void {
+    this.fetchInstructor();
   }
 
   fetchInstructor(): void {
-    
       this.instructorServie.getInstructors().subscribe(
         instructors => this.instructors = instructors
-      )
-    
+      );
   }
 
 }
